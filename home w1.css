@@ -1,0 +1,253 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+  }
+
+
+  
+  .card {
+      border-style: none;
+      background-color: gainsboro;
+  }
+
+.logo {
+    width: 100%;
+    height: 40px;
+    background-color: black;
+    z-index: -3;
+}
+
+.logo img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 40px;
+    z-index: -2;
+}
+
+.logo h2 {
+    text-align: center;
+    color: white;
+}
+
+.banner {
+    background-color: rgb(14, 159, 255);
+    width: 100%;
+    padding: 14px 16px;
+}
+
+.banner h2{
+    text-align: center;
+    color: white;
+}
+
+/* navabar */
+#navbar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgb(59, 59, 59);
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 50;  /* bs slideshows are frustrating */
+}
+
+#navbar li {
+    float: left;
+}
+
+#navbar li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+#navbar li a:not(.active):hover {
+    background-color: black;
+}
+
+.active{
+    background-color: green;
+}
+
+/* hoverbox */
+.hbcol{
+    width: 49.5%;
+    display: inline-block;
+    height: 500px;
+}
+
+@media only screen and (min-width: 400px) {
+    [class="hbcol"] {
+        width: 100%;
+        display: inline-block;
+        height: 300px;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    [class="hbcol"] {
+        width: 100%;
+        display: inline-block;
+        height: 500px;
+    }
+}
+
+@media only screen and (min-width: 900px) {
+    [class="hbcol"] {
+        width: 49.5%;
+        display: inline-block;
+        height: 350px;
+    }
+}
+
+.hbox {
+    position: relative;
+    width: 100%;
+    height: inherit;
+}
+
+.hboxtxt{
+    color: white;
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+}
+
+.hbox:hover .overlay, .hbox:active .overlay{
+    opacity: 1;
+}
+
+.ovrtxt{
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    text-align: center;
+    overflow: auto;
+}
+
+.finalbanner {
+    background-color: gray;
+    width: 100%;
+    text-align: center;
+    padding: 5px 0px;
+}
+
+.finalbanner a {
+    color: rgb(0, 27, 150);
+    text-decoration: underline;
+}
+
+/* events */
+.events {
+    width: 100%;
+    height: 250px;
+    margin: 0px;
+}
+
+@media only screen and (max-width: 800px) {
+    [class="events"] {
+        height: 400px;
+    }
+}
+
+
+.eleft {
+    position: absolute;
+    width: 40%;
+    background-color: blue;
+    height: inherit;
+}
+
+.eleft img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    float: left;
+}
+
+.eright {
+    float: left;
+    position: absolute;
+    left: 40%;
+    width: 60%;
+    background-color: rgb(211, 211, 211);
+    height: inherit;
+    text-align: center;
+    padding: 20px
+}
+
+/* Lessons */
+
+.lbannernest{
+    width: 100%;
+    height: 50px;
+}
+
+.lbanhtml{
+    position: absolute;
+    width: 49%; 
+    height: inherit;
+    background-color: gainsboro;
+    text-align: center;
+}
+
+.lbanjs{
+    position: absolute;
+    float: left;
+    left: 51%;
+    width: 49%; 
+    height: inherit;
+    background-color: gainsboro;
+    text-align: center;
+}
+
+.EvAlert {
+    text-align: center;
+
+}
+
+
+.EvConts .evcdiv {
+    display: none;
+}
+
+.EvConts div:target{
+    display: block;
+}
+
+#HTMLcont{
+    margin: 20px;
+}
+
+#JScont{
+    margin: 20px;
+}
+
